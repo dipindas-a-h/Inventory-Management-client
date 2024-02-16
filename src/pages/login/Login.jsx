@@ -1,8 +1,12 @@
 import React from "react";
 import Card from "../../components/card/Card";
 import { Button, Form, Input } from "antd";
+import { useNavigate } from "react-router-dom";
+import routePath from "../../Routes/Path";
 
 function Login() {
+  const navigate = useNavigate()
+
   return (
     <div>
       <div
@@ -35,7 +39,7 @@ function Login() {
                     </Form.Item>
                   </div>
                   <div className="col-lg-12 d-flex justify-content-center">
-                  <Button  className="login_button" style={{ width:'40%' ,height:'40px'}}>Submit</Button>
+                  <Button  className="login_button" style={{ width:'40%' ,height:'40px'}} onClick={()=>{navigate(routePath?.HOME)}}>Submit</Button>
                   </div>
                 </div>
               </Form>

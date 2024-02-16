@@ -1,0 +1,24 @@
+.heading_font{
+    font-weight: 600;
+    color: black;
+    font-size: 30px;
+}
+.add_icon{
+    font-size: 30px;
+    color: #1677ff;
+}
+.ant-modal-title{
+    display: flex;
+    justify-content: center;
+    font-size: 23px !important;
+}
+.form_font{
+    font-weight: 600;
+    font-size: 15px;
+    color: black;
+}
+.form_input{
+    .ant-input{
+        height: 45px;
+    }
+}
