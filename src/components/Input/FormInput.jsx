@@ -1,10 +1,10 @@
 import { Input } from 'antd'
 import React from 'react'
 
-function FormInput({onChange,type}) {
+function FormInput({onChange,type,value}) {
   return (
     <div className='form_input'>
-        <Input type={type} onChange={onChange} />
+        <Input value={value} type={type} onChange={onChange} />
     </div>
   )
 }

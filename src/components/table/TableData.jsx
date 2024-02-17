@@ -1,16 +1,13 @@
-import { Table } from 'antd'
-import React from 'react'
+import React from 'react';
+import { Table } from 'antd';
 
-function TableData({columns,data}) {
+function TableData({ columns, data, className }) {
   return (
-    <div className='list_table'>
+    <div className={className}>
+      <Table pagination={false} columns={columns} dataSource={data} />
 
-        <Table
-        columns={columns}
-        data = {data}
-        />
     </div>
-  )
+  );
 }
 
-export default TableData
+export default TableData;

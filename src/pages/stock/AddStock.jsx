@@ -74,7 +74,7 @@ function AddStock() {
           </div>
 
           <div className="row mt-3 mx-3">
-            <TableData columns={columns} />
+            <TableData className={'list_table'} columns={columns} />
           </div>
         </div>
       </div>
