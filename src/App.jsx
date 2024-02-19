@@ -14,18 +14,28 @@ import AddMultipleStocks from './components/stock/AddMultipleStocks'
 function App() {
   const [count, setCount] = useState(0)
 
+let token = localStorage.getItem('token')
+console.log('tok',token);
+
   return (
     <>
     <BrowserRouter>
+
+  
     <Routes>
-      <Route path='/login' element={<Login/>}></Route>
-      {/* <Route path ={routePath?.HOME} element={<DashBoard/>}/> */}
+      <Route path='/' element={<Login/>}></Route>
+{/* {token&& */}
+  <>
+      <Route path ={routePath?.HOME} element={<DashBoard/>}/>
       <Route path ={'/'} element = {<DashBoard/>}>
 
       <Route path ={routePath?.STOCK} element={<AddStock/>}/>
       <Route path ={routePath?.ADDSTOCKS} element={<AddMultipleStocks/>}/>
 
         </Route>
+        </>
+        {/* } */}
+
       
     </Routes>
     </BrowserRouter>

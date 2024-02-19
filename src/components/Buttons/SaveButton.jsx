@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CustomButton({data,onClick,className}) {
+function CustomButton({data,onClick,className,disable}) {
   return (
     <>
-        <button className={className} onClick={onClick}>{data}</button>
+        <button disabled={disable} className={className} onClick={onClick}>{data}</button>
     </>
   )
 }

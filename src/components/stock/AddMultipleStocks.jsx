@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'antd';
+import { Table, message } from 'antd';
 import FormInput from '../Input/FormInput';
 import TableData from '../table/TableData';
 import FormTextArea from '../Input/FormTextArea';
 import DeleteButton from '../Buttons/DeleteButton';
 import Addrow from '../Buttons/Addrow';
 import CustomButton from '../Buttons/SaveButton';
+import { useSelector } from 'react-redux';
+import instance from '../../utils/axios/AxiosInstance';
+import { useNavigate } from 'react-router-dom';
+import routePath from '../../Routes/Path';
 
 function AddMultipleStocks() {
-
+  const userData = useSelector((state)=>state?.userDetails?.userData)
+  const userId  =localStorage.getItem('user')
+ const navigate = useNavigate()
   const [tableData,setTableData] = useState([])
   let data = {
     "sl_no": "",
@@ -106,6 +112,38 @@ function AddMultipleStocks() {
     },
   ];
 
+
+  const handleSave = async (data)=>{
+
+    let tempData = data?.length&&data?.map((item)=>{
+      return {
+
+        'user': userId,
+        'stockName':item?.stock_name,
+        'qty':Number(item?.quantity),
+        'price':Number(item?.price),
+        'desc':item?.description
+      }
+    })
+    console.log('dtemp',tempData);
+
+    await instance.post(`/stock/addstock`,tempData)
+    .then((res)=>{
+      console.log('ress',res);
+      if(res.status ===201){
+        message.success(res?.data?.message)
+
+        setTimeout(() => {
+          navigate(routePath.STOCK)
+
+        }, 1000);
+      }
+    })
+    .catch((Err)=>{
+      message.error(Err.message)
+    })
+  }
+
   return (
     <div className='row'>
       <div className="row">
@@ -121,7 +159,7 @@ function AddMultipleStocks() {
         <div className="row d-flex mt-3 justify-content-center">
                     <CustomButton  className={'cancel_button mx-1'} data={'Cancel'}/>
 
-                        <CustomButton  className={'save_button mx-1'} data={'Save'}/>
+                        <CustomButton  className={'save_button mx-1'} onClick={()=>{handleSave(tableData)}} data={'Save'}/>
 
                     </div>
       </div>
