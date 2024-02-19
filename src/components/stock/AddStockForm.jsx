@@ -75,13 +75,17 @@ await instance.patch(`/stock/stock/${idForm}`, data)
 .then((res)=>{
     if(res.status===200){
       message.success(res?.data?.message)
-      navigate(routePath.STOCK)
-      sendModalValue(false)
+      sendModalValue(false);
+      setBtnDisable(false)
+
+    //   navigate(routePath.STOCK)
+    //   sendModalValue(false)
     }
   
 })
 .catch((err)=>{
     message.error(err?.response?.data?.message)
+    setBtnDisable(false)
 })
   }
   return (

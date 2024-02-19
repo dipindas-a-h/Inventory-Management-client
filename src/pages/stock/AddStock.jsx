@@ -121,7 +121,7 @@ function AddStock() {
       console.log("Response:", response.data);
     } catch (error) {
       console.error("Error:", error);
-      message.error(error.message);
+      // message.error(error.message);
     }
   };
 
@@ -148,7 +148,9 @@ function AddStock() {
   // getAllStocks();
 
   const handleDataFormChild = (data) => {
-    setAddModal(data);
+    console.log('dy',data);
+    setAddModal(false);
+    setEditModal(false);
   };
   useEffect(() => {
     getAllStocks();
