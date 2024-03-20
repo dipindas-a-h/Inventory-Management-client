@@ -10,6 +10,8 @@ import DashBoard from './pages/DashBoard/DashBoard'
 import AddStock from './pages/stock/AddStock'
 import AddMultipleBtn from './components/Buttons/AddMultipleBtn'
 import AddMultipleStocks from './components/stock/AddMultipleStocks'
+import SaleOrder from './pages/saleorder/SaleOrder'
+import AddSaleOrder from './pages/saleorder/AddSaleOrder'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +33,9 @@ console.log('tok',token);
 
       <Route path ={routePath?.STOCK} element={<AddStock/>}/>
       <Route path ={routePath?.ADDSTOCKS} element={<AddMultipleStocks/>}/>
+      <Route path ={routePath?.SALEORDER} element={<SaleOrder/>}/>
+      <Route path ={routePath?.ADDSALEORDER} element={<AddSaleOrder/>}/>
+      <Route path ={routePath?.EDITSALEORDER} element={<AddSaleOrder/>}/>
 
         </Route>
         </>

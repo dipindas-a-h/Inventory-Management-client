@@ -36,14 +36,21 @@ const DashBoard = () => {
             },
             {
               key: '2',
-              icon: <VideoCameraOutlined />,
-              label: 'nav ',
+              icon: <UserOutlined />,
+              label: <> <div className=""
+               onClick={()=> navigate(routePath.SALEORDER)}
+               > Sale Order</div></>,
             },
-            {
-              key: '3',
-              icon: <UploadOutlined />,
-              label: 'nav 3',
-            },
+            // {
+            //   key: '2',
+            //   icon: <VideoCameraOutlined />,
+            //   label: 'nav ',
+            // },
+            // {
+            //   key: '3',
+            //   icon: <UploadOutlined />,
+            //   label: 'nav 3',
+            // },
           ]}
         />
       </Sider>

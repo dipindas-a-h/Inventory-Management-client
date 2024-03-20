@@ -24,3 +24,15 @@
     }
      
    }
+
+   .ant-input-disabled{
+    background-color: rgb(246, 219, 219) !important;
+    color: black !important;
+}
+
+   .ant-input{
+    .ant-input-disabled{
+        background-color: white !important;
+        color: black !important;
+    }
+   } 
