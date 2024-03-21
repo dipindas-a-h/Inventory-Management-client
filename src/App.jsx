@@ -12,6 +12,7 @@ import AddMultipleBtn from './components/Buttons/AddMultipleBtn'
 import AddMultipleStocks from './components/stock/AddMultipleStocks'
 import SaleOrder from './pages/saleorder/SaleOrder'
 import AddSaleOrder from './pages/saleorder/AddSaleOrder'
+import Notification from './pages/stock/Notification'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,6 +37,7 @@ console.log('tok',token);
       <Route path ={routePath?.SALEORDER} element={<SaleOrder/>}/>
       <Route path ={routePath?.ADDSALEORDER} element={<AddSaleOrder/>}/>
       <Route path ={routePath?.EDITSALEORDER} element={<AddSaleOrder/>}/>
+      <Route path ={routePath?.NOTIFIACTION} element={<Notification/>}/>
 
         </Route>
         </>

@@ -67,7 +67,7 @@ function SaleOrder() {
 
       render: (text, record) => (
         <div className="">
-          <FaEdit
+          {/* <FaEdit
             className="mx-1"
             fontSize={20}
             color="green"
@@ -84,7 +84,7 @@ function SaleOrder() {
               setCurrentId(record?.id);
               setDeleteModal(true);
             }}
-          />
+          /> */}
         </div>
       ),
     },

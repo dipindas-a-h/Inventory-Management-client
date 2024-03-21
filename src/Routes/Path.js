@@ -7,5 +7,6 @@ const routePath = {
   SALEORDER:'/saleorder',
   ADDSALEORDER: '/addsaleorder',
   EDITSALEORDER: '/editsaleorder',
+  NOTIFIACTION:'/notification'
 };
 export default routePath;

@@ -307,7 +307,7 @@ function AddSaleOrder() {
       })
       .then((res) => {
         console.log("ress", res);
-        if (res.status === 200) {
+        if (res.status === 201) {
           message.success("updated Successfully");
 
           setTimeout(() => {

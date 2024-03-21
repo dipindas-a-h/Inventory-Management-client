@@ -3,7 +3,7 @@ import axios from 'axios';
 // Create an instance of Axios with custom configuration
 const instance = axios.create({
   baseURL: 'https://inv-mgnt-server.onrender.com', // Base URL for all requests
-  // baseURL: 'localhost:3000', // Base URL for all requests
+  // baseURL: 'http://localhost:3000/', // Base URL for all requests
  
 //   timeout: 10000, // Timeout in milliseconds
   headers: {

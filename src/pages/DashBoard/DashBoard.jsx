@@ -10,6 +10,9 @@ import { Layout, Menu, Button, theme } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
 import routePath from '../../Routes/Path';
 const { Header, Sider, Content } = Layout;
+import { AiOutlineStock } from "react-icons/ai";
+import { FcSalesPerformance } from "react-icons/fc";
+import { BiSolidNotification } from "react-icons/bi";
 
 const DashBoard = () => {
     const navigate = useNavigate()
@@ -29,17 +32,24 @@ const DashBoard = () => {
           items={[
             {
               key: '1',
-              icon: <UserOutlined />,
+              icon: <AiOutlineStock />,
               label: <> <div className=""
                onClick={()=> navigate(routePath.STOCK)}
                > Stock</div></>,
             },
             {
               key: '2',
-              icon: <UserOutlined />,
+              icon: <FcSalesPerformance />,
               label: <> <div className=""
                onClick={()=> navigate(routePath.SALEORDER)}
                > Sale Order</div></>,
+            },
+            {
+              key: '3',
+              icon: <BiSolidNotification />,
+              label: <> <div className=""
+               onClick={()=> navigate(routePath.NOTIFIACTION)}
+               > Notification</div></>,
             },
             // {
             //   key: '2',
